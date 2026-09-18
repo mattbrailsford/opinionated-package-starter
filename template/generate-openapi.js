@@ -8,7 +8,7 @@ console.log(chalk.green("Generating OpenAPI client..."));
 
 const documentName = process.argv[2];
 if (documentName === undefined) {
-    console.error(chalk.red(`ERROR: Missing Swagger document name`));
+    console.error(chalk.red(`ERROR: Missing OpenAPI document name`));
     console.error(`Please provide the document name as the first argument -- this is Constants.ApiName in your *ApiComposer.cs`);
     console.error(`Example: node generate-openapi.js yourpackage`);
     process.exit(1);
@@ -25,7 +25,7 @@ try {
     process.exit(1);
 }
 
-const openApiPath = `umbraco/swagger/${documentName}/swagger.json`;
+const openApiPath = `umbraco/openapi/${documentName}.json`;
 
 console.log(`Fetching ${chalk.yellow(`https://127.0.0.1:${port}/${openApiPath}`)}`);
 

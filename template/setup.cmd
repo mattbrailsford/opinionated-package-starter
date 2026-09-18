@@ -7,8 +7,8 @@ git init
 git branch -M main
 git remote add origin https://github.com/GITHUB_USERNAME/GITHUB_REPOSITORY.git
 
-:: ensure latest Umbraco v17 templates used
-dotnet new install Umbraco.Templates@17.* --force
+:: ensure latest Umbraco v18 templates used
+dotnet new install Umbraco.Templates@18.* --force
 
 :: use the umbraco-extension dotnet template to add the package project
 set PACKAGE_NAME=PackageStarter
