@@ -33,7 +33,7 @@ move ..\..\generate-openapi.js Client\scripts\generate-openapi.js
 for /f "delims=" %%i in ('node -p "'%PACKAGE_NAME%'.toLowerCase()"') do set DOC_NAME=%%i
 npm pkg set scripts.generate-client="node scripts/generate-openapi.js %DOC_NAME%" --prefix Client
 npm pkg delete devDependencies.node-fetch --prefix Client
-npm pkg set devDependencies.worktree-dev-port="^0.3.0" --prefix Client
+npm pkg set devDependencies.worktree-dev-port="^0.4.1" --prefix Client
 
 :: add project to solution
 cd..
